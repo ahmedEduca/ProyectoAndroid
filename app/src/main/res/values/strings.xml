@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Planificador de Viajes</string>
+    <string name="add_trip">Agregar Viaje</string>
+    <string name="trip_name">Nombre del Viaje</string>
+    <string name="destination">Destino</string>
+    <string name="start_date">Fecha de Inicio</string>
+    <string name="end_date">Fecha de Fin</string>
+    <string name="notifications">Notificaciones</string>
+    <string name="save_trip">Guardar Viaje</string>
+    <string name="select_image">Seleccionar Imagen</string>
+    <string name="error_empty_name">Ingrese el nombre del viaje</string>
+    <string name="error_empty_destination">Ingrese el destino del viaje</string>
+    <string name="error_empty_start_date">Seleccione la fecha de inicio</string>
+    <string name="error_empty_end_date">Seleccione la fecha de fin</string>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Trip Planner</string>
+    <string name="add_trip">Add Trip</string>
+    <string name="trip_name">Trip Name</string>
+    <string name="destination">Destination</string>
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date</string>
+    <string name="notifications">Notifications</string>
+    <string name="save_trip">Save Trip</string>
+    <string name="select_image">Select Image</string>
+    <string name="error_empty_name">Enter the trip name</string>
+    <string name="error_empty_destination">Enter the destination</string>
+    <string name="error_empty_start_date">Select the start date</string>
+    <string name="error_empty_end_date">Select the end date</string>
+</resources>

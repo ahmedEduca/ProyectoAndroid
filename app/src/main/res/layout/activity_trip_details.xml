@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".TripDetailsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarTripDetails"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/toolbar"
+            android:title="Detalles del Viaje"
+            android:titleTextColor="@android:color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- ImageView para la Imagen del Viaje -->
+        <ImageView
+            android:id="@+id/ivImagenViajeDetails"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:contentDescription="@string/select_image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_travel"
+            app:layout_constraintTop_toBottomOf="@id/toolbarTripDetails"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <!-- TextView para el Nombre del Viaje -->
+        <TextView
+            android:id="@+id/tvNombreViajeDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/trip_name"
+            android:textAppearance="?attr/textAppearanceHeadline5"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/ivImagenViajeDetails"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <!-- TextView para el Destino -->
+        <TextView
+            android:id="@+id/tvDestinoDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/destination"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            app:layout_constraintTop_toBottomOf="@id/tvNombreViajeDetails"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- TextView para las Fechas -->
+        <TextView
+            android:id="@+id/tvFechasDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Fechas: 01/06/2024 - 10/06/2024"
+            android:textAppearance="?attr/textAppearanceBody1"
+            app:layout_constraintTop_toBottomOf="@id/tvDestinoDetails"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- ProgressBar para el Progreso del Viaje -->
+        <ProgressBar
+            android:id="@+id/pgViajeDetails"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="8dp"
+            android:progress="70"
+            android:progressTint="@color/purple_500"
+            android:backgroundTint="#E0E0E0"
+            app:layout_constraintTop_toBottomOf="@id/tvFechasDetails"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <!-- TextView para Mostrar el Porcentaje de Progreso -->
+        <TextView
+            android:id="@+id/tvProgresoDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="70% Completo"
+            android:textAppearance="?attr/textAppearanceBody2"
+            app:layout_constraintTop_toBottomOf="@id/pgViajeDetails"
+            app:layout_constraintStart_toStartOf="@id/pgViajeDetails"
+            android:layout_marginTop="8dp" />
+
+        <!-- Botón para Editar el Viaje -->
+        <Button
+            android:id="@+id/btnEditarViajeDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Editar Viaje"
+            app:layout_constraintTop_toBottomOf="@id/tvProgresoDetails"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp" />
+
+        <!-- Botón para Eliminar el Viaje -->
+        <Button
+            android:id="@+id/btnEliminarViajeDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Eliminar Viaje"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@id/btnEditarViajeDetails"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

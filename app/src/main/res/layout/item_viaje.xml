@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- ImageView para la imagen del viaje -->
+        <ImageView
+            android:id="@+id/ivViaje"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:contentDescription="@string/select_image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_travel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- TextView para el nombre del viaje -->
+        <TextView
+            android:id="@+id/tvNombreViaje"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/trip_name"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            app:layout_constraintEnd_toStartOf="@id/buttonEditar"
+            app:layout_constraintStart_toEndOf="@id/ivViaje"
+            app:layout_constraintTop_toTopOf="@id/ivViaje" />
+
+        <!-- TextView para las fechas del viaje -->
+        <TextView
+            android:id="@+id/tvFechas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Fechas: 01/06/2024 - 10/06/2024"
+            android:textAppearance="?attr/textAppearanceBody2"
+            app:layout_constraintEnd_toEndOf="@id/tvNombreViaje"
+            app:layout_constraintStart_toStartOf="@id/tvNombreViaje"
+            app:layout_constraintTop_toBottomOf="@id/tvNombreViaje" />
+
+        <!-- ProgressBar para el progreso del viaje -->
+        <ProgressBar
+            android:id="@+id/pgViaje"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="8dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#E0E0E0"
+            android:progress="70"
+            android:progressTint="@color/purple_500"
+            app:layout_constraintEnd_toEndOf="@id/tvFechas"
+            app:layout_constraintStart_toStartOf="@id/tvFechas"
+            app:layout_constraintTop_toBottomOf="@id/tvFechas" />
+
+        <!-- TextView para mostrar el porcentaje de progreso -->
+        <TextView
+            android:id="@+id/tvProgreso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="70% Completo"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/pgViaje"
+            app:layout_constraintTop_toBottomOf="@id/pgViaje" />
+
+        <!-- Botón para Editar el Viaje -->
+        <ImageButton
+            android:id="@+id/buttonEditar"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Editar Viaje"
+            android:src="@drawable/ic_edit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/black" />
+
+        <!-- Botón para Eliminar el Viaje -->
+        <ImageButton
+            android:id="@+id/btnEliminar"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Eliminar Viaje"
+            android:src="@drawable/ic_delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonEditar"
+            app:tint="@color/black" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
